@@ -1,0 +1,74 @@
+ernestdefoe-resurface:
+  forum:
+    bump_button: Remonter en haut
+    bumped_alert: Discussion remontée en haut de la liste.
+    wait_button: "Remonter de nouveau {time}"
+    wait_title: Elle a été active trop récemment, ou vous avez utilisé vos remontées pour le moment.
+    left_title: "{count, plural, one {# remontée restante sur les prochaines 24 heures} other {# remontées restantes sur les prochaines 24 heures}}"
+    schedule_button: Planifier des remontées…
+    planned_button: "Prochaine remontée : {time}"
+    log_button: Historique des remontées
+    bumped_text: "remontée {ago}"
+    log:
+      title: Historique des remontées
+    schedule:
+      title: Planifier des remontées
+      at_label: Remonter le
+      repeat_label: Continuer à la remonter
+      every_label: Tous les
+      hours: "{count, plural, one {heure} other {heures}}"
+      days: "{count, plural, one {jour} other {jours}}"
+      every_help: "Au moins {hours, plural, one {# heure} other {# heures}} d'écart."
+      times_label: Combien de fois
+      times_placeholder: Jusqu'à ce que j'annule
+      limits_help: Les remontées planifiées comptent dans vos remontées du jour. Si c'est trop tôt, cette remontée est sautée et la suivante a lieu normalement.
+      save_button: Enregistrer
+      cancel_button: Annuler la planification
+      saved_alert: Remontées planifiées.
+      cancelled_alert: Planification annulée.
+
+  lib:
+    log:
+      empty: Aucune remontée pour l'instant.
+      when: Quand
+      discussion: Discussion
+      by: Par
+      how: Comment
+      deleted: "[supprimée]"
+      more: Charger plus
+      source:
+        manual: À la main
+        scheduled: Planifiée
+        auto: Répétée
+
+  admin:
+    settings:
+      cooldown_label: Délai d'attente (heures)
+      cooldown_help: Durée pendant laquelle une discussion doit rester sans réponse ni remontée avant que son auteur puisse la remonter. 0 pour aucun délai.
+      daily_label: Remontées par 24 heures
+      daily_help: Nombre de remontées qu'un membre peut faire sur 24 heures, toutes discussions confondues. 0 pour aucune limite.
+      log_days_label: Conserver l'historique pendant (jours)
+      log_days_help: Les entrées plus anciennes sont supprimées. 0 les conserve toutes. Les limites journalières regardent toujours les dernières 24 heures.
+    groups:
+      label: Limites par groupe
+      help: Laissez une case vide pour utiliser la valeur par défaut ci-dessus (en gris). Un membre de plusieurs groupes obtient la valeur la plus généreuse de chacune. Les groupes qui peuvent remonter n'importe quelle discussion n'ont aucune limite.
+      group: Groupe
+      cooldown: Délai (heures)
+      daily: Remontées par 24 heures
+    tags:
+      label: Étiquettes où les membres peuvent remonter
+      help: Ne cochez rien pour autoriser toutes les étiquettes. Les modérateurs peuvent remonter dans toutes les étiquettes.
+    permissions:
+      bump: Remonter ses propres discussions
+      schedule: Planifier des remontées sur ses propres discussions
+      bump_any: Remonter n'importe quelle discussion, planifier et voir l'historique (sans limites)
+    log:
+      title: Historique des remontées
+
+  api:
+    too_soon: Cette discussion ne peut pas encore être remontée. Elle a été active trop récemment, ou vous avez utilisé vos remontées pour le moment.
+    plan_at: Choisissez une date entre maintenant et dans un an.
+    plan_every: Répétez toutes les 1 à 8760 heures.
+    plan_every_cooldown: "Les répétitions doivent être espacées d'au moins {hours, plural, one {# heure} other {# heures}}."
+    plan_times: Répétez de 1 à 999 fois, ou laissez vide.
+    plan_at_cooldown: C'est trop tôt après sa dernière activité. Choisissez une heure plus tardive.

@@ -1,0 +1,70 @@
+{
+    "name": "ernestdefoe/resurface",
+    "description": "Bump a discussion back to the top without replying: manual bumps with per-group cooldowns and daily limits, per-tag control, scheduled and automatic bumps, and a bump log for staff.",
+    "keywords": ["flarum", "bump", "bumping", "classifieds", "marketplace", "scheduled"],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ernest Defoe",
+            "email": "ernestdefoe@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/ernestdefoe/resurface/issues",
+        "source": "https://github.com/ernestdefoe/resurface"
+    },
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://buymeacoffee.com/ernestdefoe"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Resurface",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-circle-up",
+                "backgroundColor": "#0e7c86",
+                "color": "#ffffff"
+            }
+        }
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ernestdefoe\\Resurface\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ernestdefoe\\Resurface\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "flarum/phpstan": "^2.0",
+        "flarum/testing": "^2.0",
+        "flarum/tags": "^2.0",
+        "flarum/lock": "^2.0"
+    },
+    "scripts": {
+        "test": [
+            "@test:integration"
+        ],
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php",
+        "analyse:phpstan": "phpstan analyse"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once.",
+        "analyse:phpstan": "Run static analysis"
+    }
+}
